@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: kullaniciadi/haber_sitesi  # GitHub repo adresin
+  branch: main
+  auth_type: implicit
+  client_id: "Iv23liGEToMLwS9mkrJx"     # GitHub OAuth Client ID
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "haberler"
+    label: "Haberler"
+    folder: "haberler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "Kategori", name: "kategori", widget: "string" }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+      - { label: "Resim", name: "thumbnail", widget: "image" }
